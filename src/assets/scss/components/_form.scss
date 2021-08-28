@@ -1,0 +1,30 @@
+.form{
+
+  $this: &;
+
+  &__group{
+    margin: 0 0 2.4rem;
+
+    &:last-child{
+      margin: 0;
+    }
+  }
+
+  &__input-row{
+    margin: 0 0 .8rem;
+
+    &:last-child{
+      margin: 0;
+    }
+
+    @include media(">=lg"){
+      margin: 0 0 1.6rem;
+    }
+  }
+
+  &__separate-line{
+    border: none;
+    border-bottom: 1px solid $secondary;
+    margin: 0 0 2.4rem;
+  }
+}

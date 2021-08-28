@@ -1,0 +1,77 @@
+.page-header{
+  padding: 2.4rem 0;
+  background-color: $white;
+  box-shadow: 0 1px 0 0 rgba($primary, 50%);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: $header-z-index;
+
+  $this: &;
+
+  &__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media(">=xl"){
+      padding: 0 8rem;
+    }
+  }
+
+  &__logo{
+    width: 16rem;
+
+    @include media(">=xl"){
+      width: 22.8rem;
+    }
+  }
+
+  &__controls{
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn{
+    @extend %buttonreset;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 0 0 2.4rem;
+    @include animate(color);
+
+    &:hover{
+      color: $primary;
+
+      #{$this}__btn-burger{
+
+        .burger__item{
+          background-color: $primary;
+        }
+
+        &::before,
+        &::after{
+          background-color: $primary;
+        }
+      }
+    }
+
+    &--login{
+      display: none;
+
+      @include media(">=md"){
+        display: inline-flex;
+      }
+    }
+  }
+
+  &__btn-text{
+    font-size: 2.2rem;
+    line-height: 1.227;
+    margin-right: 1.2rem;
+  }
+
+  &__btn-icon{
+    font-size: 2.4rem;
+  }
+}

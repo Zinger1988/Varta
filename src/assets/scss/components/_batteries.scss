@@ -1,0 +1,154 @@
+.batteries{
+  padding: 3.6rem 0 2.4rem;
+  background-color: $white;
+
+  @include media(">=md"){
+    padding: 5rem 0;
+  }
+
+  @include media(">=xl"){
+    padding: 6.4rem 0 6.4rem;
+  }
+
+  &__header{
+    margin: 0 0 2.6rem;
+
+    @include media(">=md"){
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 0 4rem;
+    }
+
+    @include media(">=xl"){
+      margin: 0 0 7rem;
+    }
+  }
+
+  &__header-title{
+    margin: 0 0 .545em;
+
+    @include media(">=sm"){
+      text-align: center;
+    }
+
+    @include media(">=lg"){
+      margin: 0;
+    }
+  }
+
+  &__header-img{
+    width: 13rem;
+    display: block;
+    margin: 0 auto;
+
+    @include media(">=md"){
+      margin: 0;
+      width: 14.5rem;
+    }
+
+    @include media(">=xl"){
+      width: 20rem;
+    }
+  }
+
+  &__body{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 40rem;
+    margin: 0 auto;
+
+    @include media(">=md"){
+      max-width: 81.1rem;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    @include media(">=xl"){
+      max-width: 98.3rem;
+    }
+  }
+
+  &__advantage{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 4rem;
+    order: -1;
+
+    @include media(">=md"){
+      order: unset;
+      margin: 7.8rem 0 0;
+    }
+
+    @include media(">=md"){
+      margin: 9.2rem 0 0;
+    }
+  }
+
+  &__advantage-pre,
+  &__advantage-post{
+    font-size: 1.5rem;
+    line-height: 1.133;
+
+    @include media(">=md"){
+      font-size: 2.2rem;
+    }
+
+    @include media(">=lg"){
+      font-size: 2.7rem;
+    }
+
+    @include media(">=xl"){
+      font-size: 3.2rem;
+    }
+  }
+
+  &__advantage-pre{
+    margin-bottom: .3em;
+  }
+
+  &__advantage-value{
+    font-size: 7.3rem;
+    line-height: .917;
+    font-weight: 700;
+
+    @include media(">=md"){
+      font-size: 9.4rem;
+    }
+
+    @include media(">=lg"){
+      font-size: 11.2rem;
+    }
+
+    @include media(">=xl"){
+      font-size: 14.8rem;
+    }
+  }
+
+  &__img{
+    margin: 0 auto;
+    width: 52.8125%;
+
+    @include media(">=md"){
+      width: 20.8rem;
+      flex-shrink: 0;
+      margin: 0;
+    }
+
+    @include media(">=md"){
+      width: 24.6rem;
+    }
+
+    @include media(">=xl"){
+      width: 28rem;
+    }
+  }
+
+  &__img-item{
+    display: block;
+    width: 100%;
+  }
+
+}

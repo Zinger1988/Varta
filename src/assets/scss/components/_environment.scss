@@ -1,0 +1,223 @@
+.environment{
+  padding: 3.6rem 0 4rem;
+
+  $this: &;
+
+  @include media(">=md"){
+    padding: 4.8rem 0;
+  }
+
+  @include media(">=1240px"){
+    padding: 6.4rem 0;
+  }
+
+  &__title{
+    @include media(">=xl"){
+      margin: 0 0 7rem;
+    }
+  }
+
+  &__inner{
+
+    @include media(">=md"){
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    @include media(">=xl"){
+      flex-wrap: nowrap;
+      align-items: stretch;
+    }
+  }
+
+  &__inner-item{
+    @include media(">=md"){
+      flex: 1;
+      margin: 0 0 2.4rem;
+    }
+
+    @include media(">=xl"){
+      margin: 0;
+    }
+
+    &--advantages-list{
+      @include media(">=md"){
+        flex: 1 0 38rem;
+      }
+
+      @include media(">=lg"){
+        flex: 1 0 34rem;
+        margin: 0 4rem 4rem 0;
+      }
+
+      @include media(">=xl"){
+        flex: 1 0 51rem;
+        margin: 0 5rem 0 0;
+        padding: 0 5rem 0 0;
+        border-right: 1px solid rgba($black, .5);
+      }
+    }
+
+    &--package{
+      @include media(">=md"){
+        flex: 0 0 20rem;
+        margin: 0 4.3rem;
+
+        #{$this}__package-img{
+          width: 100%;
+          max-width: none;
+        }
+      }
+
+      @include media(">=lg"){
+        flex: 0 0 23.4rem;
+        margin: 0 8rem;
+      }
+
+      @include media(">=xl"){
+        flex: 0 0 27rem;
+        margin: 0;
+      }
+    }
+
+    &--ver{
+      @include media(">=md"){
+        margin: 0;
+      }
+
+      @include media(">=lg"){
+        margin: 0 0 0 8rem;
+      }
+
+      @include media(">=xl"){
+        padding: 0;
+        border: none;
+        flex: 1 0 39rem;
+      }
+
+      #{$this}__advantages-item{
+        display: block;
+        margin: 0 0 3.2rem;
+
+        @include media(">=md"){
+          display: flex;
+          align-items: flex-start;
+        }
+      }
+
+      #{$this}__advantages-value{
+        padding: 0;
+        width: auto;
+        text-align: left;
+        margin: 0 0 .9rem;
+
+        @include media(">=md"){
+          min-width: 15rem;
+          flex-shrink: 0;
+          margin: 0 2rem 0 0;
+        }
+      }
+    }
+  }
+
+  &__environment-badge{
+    margin: 0 auto 4rem;
+    width: 28.3rem;
+
+    @include media(">=md"){
+      margin: 0 7rem 0 0;
+      width: 21.3rem;
+    }
+
+    @include media(">=lg"){
+      width: 28rem;
+      margin: 0 8.9rem 4rem 0;
+    }
+
+    @include media(">=xl"){
+      width: 31rem;
+      margin: 0 4.4rem 0 0;
+    }
+  }
+
+  &__advantages-list{
+    @extend %listreset;
+    margin: 0 0 3rem;
+
+    @include media(">=md"){
+      margin: 0;
+    }
+  }
+
+  &__advantages-item{
+    display: flex;
+    margin: 0 0 5.5rem;
+    align-items: center;
+
+    &:last-child{
+      margin: 0;
+    }
+
+    &::before{
+      display: none;
+    }
+  }
+
+  &__advantages-value{
+    padding: 0 1rem;
+    flex-shrink: 0;
+    width: 16.4rem;
+    text-align: center;
+    font-size: 6.2rem;
+    line-height: .951;
+    font-weight: 700;
+
+    @include media(">=md"){
+      width: 13rem;
+      flex-shrink: 0;
+      padding: 0;
+      margin: 0 3.6rem 0 0;
+    }
+  }
+
+  &__advantages-value-img{
+    display: block;
+    width: 12.9rem;
+    margin: 0 auto;
+
+    @include media(">=md"){
+      width: 100%;
+    }
+  }
+
+  &__advantages-desc{
+    font-size: 2rem;
+    line-height: 1.15;
+
+    *:last-child{
+      margin: 0;
+    }
+  }
+
+  &__hr-line{
+    margin: 0 0 2.8rem;
+
+    @include media(">=md"){
+      flex-shrink: 0;
+      width: 100%;
+      margin: 0 0 1.2rem;
+    }
+
+    @include media(">=xl"){
+      display: none;
+    }
+  }
+
+  &__package-img{
+    display: block;
+    width: 49.0625%;
+    margin: 0 auto;
+    max-width: 22rem;
+  }
+}

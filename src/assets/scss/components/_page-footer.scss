@@ -1,0 +1,27 @@
+.page-footer{
+  background-color: $white;
+
+  &__holder{
+    padding: 2rem 0;
+    font-size: 1.2rem;
+    line-height: 1.083;
+
+    @include media(">=md"){
+      padding: 4.2rem 0;
+    }
+
+    @include media(">=lg"){
+      padding: 6.4rem 0;
+    }
+  }
+
+  &__note-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__note-list-item{
+    display: inline;
+  }
+}

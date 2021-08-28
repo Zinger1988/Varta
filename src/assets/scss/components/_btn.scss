@@ -1,0 +1,64 @@
+.btn{
+  @extend %buttonreset;
+  @extend %linkreset;
+  display: inline-flex;
+  vertical-align: middle;
+  background-color: #767676;
+  color: $white;
+  font-family: $font-condensed;
+  $this: &;
+  @include animate(background-color color box-shadow);
+
+  &--fluid{
+    display: flex;
+    width: 100%;
+    margin: 0;
+  }
+
+  &--size{
+
+    &--regular{
+      font-size: 2.2rem;
+      line-height: 1.181;
+      padding: .36em;
+    }
+  }
+
+  &--style{
+
+    &--primary{
+      background-color: $primary;
+      color: $white;
+
+      &:hover{
+        background-color: transparent;
+        color: $primary;
+        box-shadow: inset 0 0 0 1px $primary;
+      }
+    }
+
+    &--secondary{
+      background-color: transparent;
+      color: $primary;
+      box-shadow: inset 0 0 0 1px $primary;
+
+      &:hover{
+        background-color: $primary;
+        color: $white;
+      }
+    }
+  }
+
+  &--widened{
+    padding-right: 2.727em;
+    padding-left: 2.727em;
+  }
+
+  &:disabled,
+  &--style--disabled{
+    cursor: default;
+    background-color: transparent;
+    color: #767676;
+    box-shadow: inset 0 0 0 1px #767676;
+  }
+}

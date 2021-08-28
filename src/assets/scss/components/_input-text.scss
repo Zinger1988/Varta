@@ -1,0 +1,47 @@
+.input-text{
+  @extend %nowrap;
+  display: block;
+  -moz-appearance: textfield;
+  font-family: $font-input;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  background-color: transparent;
+  border-radius: 0;
+  outline: none;
+  padding: .8rem 0;
+  border: none;
+  border-bottom: 1px solid $grey-alt;
+  @include animate(box-shadow border);
+
+  @include placeholder {
+    color: $grey-alt2;
+    opacity: 1;
+    @include animate(opacity);
+  }
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &:hover {
+    border-bottom-color: $primary-alt2;
+    box-shadow: inset 0 -1px 0 $primary-alt2;
+    outline: none;
+  }
+
+  &:focus:not(:read-only) {
+    box-shadow: inset 0 -1px 0 $primary-alt2;
+
+    @include placeholder {
+      opacity: 0;
+    }
+  }
+
+  &--textarea{
+    white-space: pre-wrap;
+    overflow: auto;
+    resize: none;
+  }
+}

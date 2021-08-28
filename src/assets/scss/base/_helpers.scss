@@ -1,0 +1,107 @@
+// list reset
+%listreset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// link reset
+%linkreset {
+  text-decoration: none;
+  color: inherit;
+  &:hover,
+  &:focus{
+    text-decoration: none;
+  }
+}
+
+// clearfix
+%clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+// button reset
+%buttonreset {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  font-family: inherit;
+  cursor: pointer;
+
+  &:focus{
+    outline: none;
+  }
+}
+
+// no wrap
+%nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.clearfix {
+  @extend %clearfix;
+}
+
+.no-overflow{
+  overflow: hidden;
+}
+
+.hidden{
+  display: none;
+}
+
+.text{
+
+  &--nowrap{
+    @extend %nowrap;
+  }
+
+  &--right{
+    text-align: right;
+  }
+
+  &--left{
+    text-align: left;
+  }
+
+  &--center{
+    text-align: center;
+  }
+
+  &--size--small{
+    font-size: 1.4rem;
+  }
+
+  &--weight{
+
+    &--400{
+      font-weight: 400;
+    }
+
+    &--700{
+      font-weight: 700;
+    }
+  }
+
+  &--style{
+
+    &--condensed{
+      font-family: $font-condensed;
+    }
+
+    &--widened{
+      font-family: $font-widened;
+    }
+
+    &--accent{
+      color: $accent;
+    }
+  }
+}

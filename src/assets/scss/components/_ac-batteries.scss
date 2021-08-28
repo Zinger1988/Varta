@@ -1,0 +1,376 @@
+.ac-batteries{
+  background-color: $white;
+  padding: 4rem 0;
+
+  @include media(">=md"){
+    padding: 4.8rem 0;
+  }
+
+  @include media(">=xl"){
+    padding: 6.4rem 0 0;
+  }
+
+  &__title{
+    margin: 0 0 2.3rem;
+
+    @include media(">=sm"){
+      text-align: center;
+      margin: 0 0 4rem;
+    }
+
+    @include media(">=md"){
+      text-align: left;
+    }
+
+    @include media(">=lg"){
+      margin: 0 0 5rem;
+    }
+
+    @include media(">=xl"){
+      margin: 0 0 7rem;
+    }
+  }
+
+  &__inner{
+
+    @include media(">=md"){
+      display: flex;
+      justify-content: center;
+    }
+
+    @include media(">=xl"){
+      align-items: flex-start;
+    }
+  }
+
+  &__advantage{
+    margin: 0 auto 3.7rem;
+
+    @include media(">=sm"){
+      text-align: center;
+    }
+
+    @include media(">=md"){
+      margin: 0;
+      text-align: left;
+    }
+
+    @include media(">=md"){
+      margin: 6.7rem 3.6rem 0 0;
+    }
+
+    @include media(">=lg"){
+      margin: 8rem 3.2rem 0 0;
+      width: 20.6rem;
+    }
+
+    @include media(">=xl"){
+      margin: 8.2rem 2.5rem 0 0;
+      width: 27.3rem;
+    }
+  }
+
+  &__advantage-holder{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+
+    @include media(">=sm"){
+      display: inline-block;
+      text-align: left;
+    }
+
+    @include media(">=md"){
+      text-align: left;
+    }
+  }
+
+  &__advantage-post{
+    flex-shrink: 0;
+    width: 100%;
+  }
+
+  &__advantage-pre,
+  &__advantage-post{
+    font-size: 1.5rem;
+    line-height: 1.133;
+
+    @include media(">=sm") {
+      font-size: 2.7rem;
+      display: block;
+    }
+
+    @include media(">=md"){
+      font-size: 2rem;
+    }
+
+    @include media(">=lg"){
+      font-size: 2.7rem;
+    }
+
+    @include media(">=xl"){
+      font-size: 3.2rem;
+    }
+  }
+
+  &__advantage-pre{
+    @include media(">=sm") {
+      margin: 0 0 .3em;
+    }
+  }
+
+  &__advantage-value{
+    font-size: 6.2rem;
+    line-height: .935;
+    font-weight: 700;
+
+    @include media(">=sm") {
+      font-size: 11.2rem;
+      display: block;
+    }
+
+    @include media(">=md"){
+      font-size: 8.9rem;
+    }
+
+    @include media(">=lg"){
+      font-size: 11.2rem;
+    }
+
+    @include media(">=xl"){
+      font-size: 14.8rem;
+    }
+  }
+
+  &__img{
+    width: 23.2rem;
+    margin: 0 auto -2.5rem;
+
+    @include media(">=sm") {
+      margin: 0 auto -9rem;
+    }
+
+    @include media(">=md") {
+      flex-shrink: 0;
+      margin: 0;
+      width: 19rem;
+    }
+
+    @include media(">=lg"){
+      width: 23.7rem;
+    }
+
+    @include media(">=xl"){
+      width: auto;
+      max-width: 30.2rem;
+      margin-right: 5.77%;
+    }
+  }
+
+  &__img-item{
+    display: block;
+    width: 100%;
+  }
+
+  &__holder{
+    @include media(">=sm"){
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include media(">=md"){
+      flex-direction: column;
+    }
+
+    @include media(">=md"){
+      justify-content: flex-start;
+      margin: 9.1rem 0 0;
+    }
+
+    @include media(">=xl"){
+      width: 49.27%;
+      flex-shrink: 0;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin: 0;
+    }
+  }
+
+  &__recycling{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 6.3rem;
+
+    @include media(">=sm"){
+      margin: 0 2rem 0 0;
+    }
+
+    @include media(">=md"){
+      margin: 0 0 4.5rem 3rem;
+      justify-content: flex-start;
+    }
+
+    @include media(">=lg"){
+      margin: 0 0 4.7rem 3.4rem;
+    }
+
+    @include media(">=xl"){
+      margin: 0 0 2.3rem;
+    }
+  }
+
+  &__recycling-img{
+    width: 5.4rem;
+    margin: 0 .8rem 0 0;
+    flex-shrink: 0;
+
+    @include media(">=sm"){
+      width: 4.4rem;
+    }
+
+    @include media(">=md"){
+      width: 6.9rem;
+      margin: 0 1.3rem 0 0;
+    }
+
+    @include media(">=lg"){
+      width: 8.2rem;
+      margin: 0 1.5rem 0 0;
+    }
+
+    @include media(">=xl"){
+      width: 10.5rem;
+      margin: 0 2rem 0 0;
+    }
+  }
+
+  &__recycling-img-item{
+    display: block;
+    width: 100%;
+  }
+
+  &__recycling-value{
+    font-weight: 700;
+    font-size: 7.4rem;
+    line-height: .945;
+    margin: 0 0 .6rem;
+
+    @include media(">=sm"){
+      font-size: 5rem;
+      margin: 0;
+    }
+
+    @include media(">=md"){
+      font-size: 8.9rem;
+    }
+
+    @include media(">=lg"){
+      font-size: 11.2rem;
+    }
+
+    @include media(">=xl"){
+      font-size: 14.8rem;
+      line-height: .7;
+    }
+  }
+
+  &__recycling-post{
+    font-size: 1.5rem;
+    line-height: 1.133;
+
+    @include media(">=md"){
+      font-size: 1.9rem;
+    }
+
+    @include media(">=lg"){
+      font-size: 2.7rem;
+    }
+
+    @include media(">=xl"){
+      font-size: 3.2rem;
+    }
+  }
+
+  &__lifetime{
+    @include media(">=sm"){
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 22rem;
+    }
+
+    @include media(">=sm"){
+      max-width: none;
+    }
+
+    @include media(">=xl"){
+      flex-direction: column;
+      max-width: 29.8rem;
+    }
+  }
+
+  &__lifetime-img{
+    width: 29.8rem;
+    margin: 0 auto 4.4rem;
+
+    @include media(">=sm"){
+      width: 10rem;
+      flex-shrink: 0;
+      margin: 0;
+    }
+
+    @include media(">=md"){
+      width: 13.4rem;
+    }
+
+    @include media(">=lg"){
+      width: 17.5rem;
+      margin: 0 1.9rem 0 0;
+    }
+
+    @include media(">=xl"){
+      width: 100%;
+      margin: 0 .3rem 0 0;
+    }
+  }
+
+  &__lifetime-img-item{
+    display: block;
+    width: 100%;
+  }
+
+  &__lifetime-text{
+    text-align: center;
+    font-family: $font-widened;
+    font-weight: 700;
+    font-size: 2.9rem;
+    line-height: 1.068;
+
+    @include media(">=sm"){
+      text-align: left;
+      font-size: 1.6rem;
+    }
+
+    @include media(">=sm"){
+      font-size: 1.9rem;
+    }
+
+    @include media(">=lg"){
+      font-size: 2.5rem;
+    }
+
+    @include media(">=xl"){
+      padding: 0 1.5rem;
+      font-size: 3.6rem;
+    }
+
+    sup{
+      font-weight: 400;
+    }
+  }
+}

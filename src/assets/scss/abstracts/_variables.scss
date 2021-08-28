@@ -1,0 +1,35 @@
+// Colors
+// Name that color https://chir.ag/projects/name-that-color/
+
+$primary: #1A428A;
+$primary-alt: #2256B4;
+$primary-alt2: #2F6BD8;
+$accent: #FDCA00;
+
+$grey: #F7F7F7;
+$grey-alt: #707070;
+$grey-alt2: #767676;
+
+$white: #ffffff;
+$black: #000000;
+
+// Layers
+
+$header-z-index: 100;
+
+// Default html and body font-size for the base rem value.
+$rem-base: 62.5%; // 16px * .625 ~= 10px
+
+// Body
+$base-text-color: $black;
+$base-background-color: $grey;
+$base-font-size-mobile: 1.5rem;
+$base-font-size-desktop: 1.8rem;
+$base-line-height: 1.222;
+$base-font-family: 'din', 'Helvetica Neue', 'Helvetica', sans-serif;
+$font-condensed: 'din-cd', 'Helvetica Neue', 'Helvetica', sans-serif;
+$font-widened: 'din-wd', 'Helvetica Neue', 'Helvetica', sans-serif;
+$font-input: 'Roboto', 'Helvetica Neue', 'Helvetica', sans-serif;
+
+// Liks
+$base-link-color: $primary;

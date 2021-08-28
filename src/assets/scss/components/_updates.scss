@@ -1,0 +1,139 @@
+.updates{
+  padding: 3.6rem 0 0;
+
+  &__list{
+    @include media(">=lg"){
+      display: grid;
+      grid-gap: 4.5rem;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &__list-item{
+    margin: 0 0 3rem;
+
+    @include media(">=sm"){
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 3rem;
+      margin: 0 0 5rem;
+    }
+
+    @include media(">=lg"){
+      display: block;
+    }
+
+    &:last-child{
+      margin: 0;
+    }
+  }
+
+  &__list-num{
+    display: flex;
+    align-items: center;
+    margin: 0 0 1.9rem;
+
+    @include media(">=lg"){
+      align-items: flex-start;
+    }
+  }
+
+  &__list-num-item{
+    font-family: $font-widened;
+    font-weight: 700;
+    font-size: 10.02rem;
+    line-height: 1;
+    margin-right: 2.4rem;
+
+    @include media(">=lg"){
+      font-size: 8rem;
+    }
+  }
+
+  &__list-num-text{
+    font-size: 2.6rem;
+    line-height: 1.038;
+
+    @include media(">=sm"){
+      font-size: 2.2rem;
+    }
+
+    @include media(">=lg"){
+      font-size: 1.9rem;
+      margin-top: .7rem;
+    }
+  }
+
+  .updates__list-desc-pre,
+  .updates__list-desc-post{
+    font-size: 1.9rem;
+    line-height: 1.315;
+    margin: 0 0 2rem;
+    color: $primary;
+
+    @include media(">=sm"){
+      font-size: 1.6rem;
+    }
+
+    @include media(">=md"){
+      font-size: 1.9rem;
+    }
+
+    &:last-child{
+      margin: 0;
+    }
+  }
+
+  &__list-desc-img{
+    display: block;
+    margin: 0 auto 2rem;
+
+    @include media(">=sm"){
+      margin: 0 0 2rem;
+    }
+
+    @include media(">=lg"){
+      margin: 0 auto 2rem;
+    }
+
+    &--chart{
+      max-width: 32rem;
+      width: 100%;
+
+      @include media(">=lg"){
+        max-width: none;
+      }
+    }
+
+    &--infographic{
+      max-width: 26rem;
+      width: 100%;
+
+      @include media(">=sm"){
+        max-width: 25rem;
+        width: 82.58%;
+      }
+
+      @include media(">=lg"){
+        max-width: none;
+        width: 60.728%;
+      }
+    }
+
+    &--batteries{
+      max-width: 20.4rem;
+      width: 100%;
+      margin: 0 auto;
+
+      @include media(">=sm"){
+        max-width: 14rem;
+        width: 49.1%;
+      }
+
+      @include media(">=lg"){
+        max-width: none;
+        width: 40.485%;
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.checkbox-radio{
+  display: inline-flex;
+  cursor: pointer;
+  align-items: center;
+
+  $this: &;
+
+  &__input{
+    display: none;
+
+    &:checked ~ #{$this}__toggler{
+      box-shadow: inset 0 0 0 1px transparent;
+      background-color: $primary;
+      color: $white;
+    }
+
+    &[type="checkbox"]{
+      ~ #{$this}__toggler{
+        width: 1.8rem;
+        height: 1.8rem;
+        border-radius: 2px;
+      }
+    }
+
+    &[type="radio"]{
+      ~ #{$this}__toggler{
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__toggler{
+    flex-shrink: 0;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px $primary;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include animate(color background-color box-shadow);
+
+    &::before{
+      content: "\e806";
+      font: .9rem/1 'Fontello';
+    }
+  }
+
+  &:hover{
+    #{$this}__input:not(:checked) ~ #{$this}__toggler{
+      color: rgba(#2256B4,50%);
+    }
+
+    #{$this}__input:checked ~ #{$this}__toggler{
+      background-color: #5C78AA;
+      box-shadow: inset 0 0 0 1px transparent;
+    }
+  }
+
+  &__label{
+    margin-left: .8rem;
+    flex-grow: 1;
+  }
+}

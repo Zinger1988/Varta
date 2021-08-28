@@ -1,0 +1,98 @@
+// Typography
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6{
+  font-weight: bold;
+}
+
+h1, .h1{
+  font-size: 5.4rem;
+  line-height: 1.018;
+  margin: 0 0 .77em;
+
+  @include media(">=xl"){
+    font-size: 8.2rem;
+    line-height: 1.024;
+    margin: 0 0 .55em;
+  }
+}
+
+h2, .h2 {
+  font-size: 4.4rem;
+  line-height: 1.045;
+  margin: 0 0 .77em;
+
+  @include media(">=xl"){
+    font-size: 7.2rem;
+    line-height: 1;
+    margin: 0 0 .55em;
+  }
+}
+
+h3, .h3 {
+  font-size: 2.6rem;
+  line-height: 1.222;
+  margin: 0 0 .777em;
+
+  @include media(">=xl"){
+    font-size: 3.4rem;
+    line-height: 1.222;
+    margin: 0 0 .888em;
+  }
+}
+
+h4, .h4 {
+  font-size: 1.8rem;
+  line-height: 1.222;
+  margin: 0 0 .888em;
+
+  @include media(">=xl"){
+    font-size: 2.4rem;
+    line-height: 1.166;
+    margin: 0 0 1em;
+  }
+}
+
+h5, .h5,
+h6, .h6{
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
+p, .p{
+  margin: 0 0 .93em;
+}
+
+ul{
+  margin: 0 0 .93em;
+  padding: 0;
+  list-style: none;
+
+  li{
+    margin: 0 0 .571em;
+    padding: 0;
+
+    &::before{
+      content: '\2022\00A0';
+    }
+
+    &:last-child{
+      margin: 0;
+    }
+  }
+}
+
+a {
+  color: $primary-alt;
+  text-decoration-color: transparent;
+  @include animate('text-decoration-color');
+
+  &:hover {
+    text-decoration-color: $primary-alt;
+  }
+}

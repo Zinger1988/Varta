@@ -1,0 +1,32 @@
+@import "fonts";
+@import "typography";
+@import "forms";
+@import "helpers";
+
+html {
+  font-size: $rem-base;
+  font-family: $base-font-family;
+  color: $base-text-color;
+  background-color: $base-background-color;
+  height: 100%;
+}
+
+body {
+  font-size: $base-font-size-mobile;
+  line-height: $base-line-height;
+  overflow-x: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include media(">=xl"){
+    font-size: $base-font-size-desktop;
+  }
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
