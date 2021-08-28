@@ -80,10 +80,6 @@ ul{
     &::before{
       content: '\2022\00A0';
     }
-
-    &:last-child{
-      margin: 0;
-    }
   }
 }
 
