@@ -1,0 +1,20 @@
+.swiper{
+
+  .swiper-slide{
+    width: 6.8rem;
+    position: relative;
+
+    @include media(">=md"){
+      width: 8.8rem;
+    }
+
+    @include media(">=lg"){
+      width: 11.9rem;
+    }
+
+    @include media(">=xl"){
+      width: 22rem;
+    }
+  }
+
+}

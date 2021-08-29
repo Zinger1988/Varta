@@ -1,0 +1,365 @@
+.product-slider{
+  background: #DCE0E3;
+
+  &__container{
+    position: relative;
+    background: rgb(220,224,227);
+    padding: 2.1rem 0 0;
+
+    @include media(">=md"){
+      padding-top: 3.2rem;
+      padding-bottom: 3rem;
+    }
+
+    @include media(">=lg"){
+      padding-top: 4.5rem;
+      padding-bottom: 5rem;
+    }
+
+    @include media(">=xl"){
+      padding-top: 8rem;
+      padding-bottom: 0;
+    }
+  }
+
+  &__title{
+    font-size: 3.6rem;
+    line-height: 1;
+    font-family: $font-widened;
+    text-align: center;
+    margin: 0 0 2rem;
+    animation: zoomIn ease-in-out 2s;
+    position: relative;
+    z-index: 116;
+
+    @include media(">=md"){
+      width: calc(50% - 12rem);
+      text-align: left;
+      font-size: 3.3rem;
+      min-height: 6.8rem;
+    }
+
+    @include media(">=lg"){
+      font-size: 4.1rem;
+      width: calc(50% - 14.3rem);
+      min-height: 8.2rem;
+    }
+
+    @include media(">=xl"){
+      font-size: 8rem;
+      min-height: 16rem;
+      width: calc(50% - 26.5rem);
+    }
+  }
+
+  @keyframes zoomIn {
+    0% {
+      opacity: 0;
+      transform: scale(.5);
+    }
+
+    75% {
+      opacity: 0;
+      transform: scale(.5);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  &__batteries{
+    background: url("../img/products/shape.svg") no-repeat center bottom/ 20.5rem auto;
+    padding: 0 0 7rem;
+    margin: 0 0 -11.5rem;
+    position: relative;
+    z-index: 115;
+    animation: slideIn ease-in-out 1s;
+
+    @include media(">=md"){
+      background: url("../img/products/shape.svg") no-repeat center bottom/ 26.3rem auto;
+      padding: 0 0 9.2rem;
+      margin: -16.5rem 0 -15rem;
+    }
+
+    @include media(">=lg"){
+      background: url("../img/products/shape.svg") no-repeat center bottom/ 34.6rem auto;
+      padding: 0 0 12.1rem;
+      margin: -21rem 0 -20.3rem;
+    }
+
+    @include media(">=xl"){
+      background: url("../img/products/shape.svg") no-repeat center bottom/ 61.9rem auto;
+      padding: 0 0 20.5rem;
+      margin: -35rem 0 -38.4rem;
+    }
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateY(-80rem);
+    }
+
+    70% {
+      transform: translateY(3rem);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  &__batteries-img{
+    display: block;
+    margin: 0 auto;
+    width: 10.8rem;
+    animation: slideInAlt ease-in-out 2s;
+
+    @include media(">=md"){
+      width: 11.3rem;
+    }
+
+    @include media(">=lg"){
+      width: 15rem;
+    }
+
+    @include media(">=xl"){
+      width: 26.7rem;
+    }
+  }
+
+  @keyframes slideInAlt {
+    0% {
+      transform: translateY(-80rem);
+    }
+
+    50% {
+      transform: translateY(-70rem);
+    }
+
+    85% {
+      transform: translateY(3rem);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  &__inner{
+    display: flex;
+    position: relative;
+    background: linear-gradient(0deg, rgba(230,234,237,0) 0%, rgba(225,227,230,0.2) 25%, rgba(220,224,227,1) 100%), $white;
+    animation: opacity ease-in-out 3s;
+    @include animate(opacity);
+
+    &::before,
+    &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 9rem;
+      z-index: 10;
+
+      @include media(">=sm"){
+        width: 13.4rem;
+      }
+
+      @include media(">=lg"){
+        width: 18rem;
+      }
+
+      @include media(">=lg"){
+        width: 18rem;
+      }
+
+      @include media(">=1240px"){
+        width: 24rem;
+      }
+
+      @include media(">=xl"){
+        width: 28.5rem;
+      }
+    }
+
+    &::before{
+      left: 0;
+      background: linear-gradient(-90deg, rgba(230,234,237,0) 0%, rgba(225,227,230,0.2) 25%, rgba(220,224,227,1) 100%);
+    }
+
+    &::after{
+      right: 0;
+      background: linear-gradient(90deg, rgba(230,234,237,0) 0%, rgba(225,227,230,0.2) 25%, rgba(220,224,227,1) 100%);
+    }
+  }
+
+  @keyframes opacity {
+    0% {
+      opacity: 0;
+    }
+
+    66% {
+      opacity: 0;
+    }
+
+    90% {
+      opacity: 1;
+    }
+  }
+
+  &__item{
+    flex: 0 0 50%;
+    position: relative;
+
+    &::after{
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 50%;
+      background: linear-gradient(180deg, rgba(230,234,237,0) 0%, rgba(225,227,230,0.2) 25%, rgba(220,224,227,1) 100%);
+      z-index: 5;
+
+      @include media(">=md"){
+        height: 33.333%;
+      }
+
+      @include media(">=lg"){
+        height: 29%;
+      }
+    }
+  }
+
+  .product-slide{
+    display: block;
+    width: 100%;
+
+    @include media(">=md"){
+      height: 19.4rem;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    @include media(">=lg"){
+      height: 25.9rem;
+    }
+
+    @include media(">=xl"){
+      height: 48.6rem;
+    }
+  }
+
+  &__nav-btn{
+    position: absolute;
+    bottom: 3.4rem;
+    z-index: 11;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    background-color: rgba($white,.37);
+    color: $accent;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    @include animate(background-color color);
+
+    @include media(">=md"){
+      bottom: 10.2rem;
+    }
+
+    @include media(">=lg"){
+      width: 6rem;
+      height: 6rem;
+      line-height: 6rem;
+      font-size: 1.8rem;
+      bottom: 17.9rem;
+    }
+
+    @include media(">=xl"){
+      bottom: 30.05rem;
+    }
+
+    &:hover{
+      background-color: $accent;
+      color: $white;
+    }
+
+    &--prev{
+      left: 2rem;
+
+      @include media(">=lg"){
+        left: 4.4rem;
+      }
+    }
+
+    &--next{
+      right: 2rem;
+
+      @include media(">=lg"){
+        right: 4.4rem;
+      }
+    }
+  }
+
+  &__scroll-down{
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.4rem;
+    font-family: $font-condensed;
+    line-height: 1;
+    z-index: 15;
+    animation: slideInAlt2 ease-in-out 3s;
+
+    @include media(">=md"){
+      left: calc(50% + 18.5rem);
+      bottom: 1.4rem;
+    }
+
+    @include media(">=lg"){
+      left: calc(50% + 24rem);
+      bottom: 2.4rem;
+    }
+
+    @include media(">=xl"){
+      bottom: 3.5rem;
+    }
+
+    &::after{
+      content: "";
+      display: block;
+      width: 1rem;
+      height: 4.1rem;
+      margin: .8rem auto 0;
+      background: url("../img/products/scroll.svg") no-repeat center / contain;
+
+      @include media(">=lg"){
+        width: 1.4rem;
+        height: 5.7rem;
+      }
+    }
+  }
+
+  @keyframes slideInAlt2 {
+    0% {
+      transform: translate(-50%, -80rem);
+    }
+
+    65% {
+      transform: translate(-50%, -80rem);
+    }
+
+    90% {
+      transform: translate(-50%, 3rem);
+    }
+
+    100% {
+      transform: translate(-50%, 0);
+    }
+  }
+}

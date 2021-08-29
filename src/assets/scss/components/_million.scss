@@ -73,6 +73,8 @@
       font-size: 4.2rem;
       margin: 0;
       flex: 1 0;
+      padding-right: 3rem;
+      max-width: 50%;
     }
 
     @include media(">=xl"){
