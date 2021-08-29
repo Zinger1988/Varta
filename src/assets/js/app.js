@@ -15,7 +15,8 @@ class Modal {
         const modalButtons = document.querySelectorAll('[data-modal-id]');
 
         modalButtons.forEach(button => {
-            button.addEventListener('click', () => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault()
                 if(Modal.activeModal){
                     Modal.hide();
                 }

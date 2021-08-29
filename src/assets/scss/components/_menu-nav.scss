@@ -1,0 +1,34 @@
+.menu-nav{
+  display: block;
+
+  &__list{
+    @extend %listreset;
+  }
+
+  &__list-item{
+    margin: 0 0 1.3rem;
+
+    &:last-child{
+      margin: 0;
+    }
+  }
+
+  &__list-link{
+    @extend %linkreset;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__list-icon{
+    font-size: 1rem;
+    color: $accent;
+    margin: 0 .8rem 0 0;
+  }
+
+  &__list-text{
+    font-size: 2.6rem;
+    line-height: 1.2407;
+    font-family: $font-condensed;
+  }
+
+}

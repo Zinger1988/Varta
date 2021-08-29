@@ -9,82 +9,146 @@
 
 .modal{
   position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  left: 50%;
+  top: 50%;
+  min-width: 34rem;
+  width: calc(100% - 4rem);
   max-height: calc(100vh - 9rem);
-  border-radius: 2.4rem 2.4rem 0 0;
-  background-color: $white;
+  background: $white url("../img/bg/shape.svg") no-repeat top center/ 24rem auto;
   display: flex;
   flex-direction: column;
-  transform: translate(0, 110%);
+  transform: translate(-4000px, -50%);
   z-index: 1000;
-  @include animate(transform);
+  padding: 1rem 2rem 3rem;
+  @include animate(transform, .5s);
+
+  &--sm{
+    max-width: 34rem;
+  }
+
+  &--md{
+    max-width: 60rem;
+  }
+
+  &--lg{
+    max-width: 83rem;
+  }
 
   &.visible{
-    transform: translate(0, 0);
+    transform: translate(-50%, -50%);
   }
 
-  @include media(">=sm"){
+  &--menu{
     left: auto;
-    bottom: auto;
-    top: 4rem;
-    right: 1.6rem;
-    width: 42rem;
-    height: 76.6rem;
-    transform: translate(110%, 0);
-    border-radius: 2.4rem;
+    top: 0;
+    right: 0;
+    transform: translate(120vw, 0);
+    width: 32rem;
+    min-width: 0;
+    height: 100%;
+    max-height: none;
+    background: $white;
+    padding: 3.5rem;
+
+    &.visible {
+      transform: translate(0, 0);
+    }
   }
 
-  @include media(">=md"){
-    right: 3rem;
+  &__btn-close{
+    font-size: 1.8rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    text-align: center;
+    color: $white;
+    position: absolute;
+    right: 0;
+    top: -4rem;
+    cursor: pointer;
+
+    @include media(">=lg"){
+      top: 0;
+      right: -4rem;
+    }
   }
 
-  &__title-controls{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    flex: 0 1 auto;
-    padding: 0 0 1.6rem;
-    margin: 2.4rem 2.4rem 0;
-    border-bottom: 1px solid $secondary;
+  &__title{
+    border-bottom: 1px solid $primary;
+    margin: 0 auto 3rem;
+    min-width: 30rem;
   }
 
-  &__btn--close{
-    margin-left: auto;
+  &__heading{
+    padding: 1rem 2.5rem;
+    font-size: 2.2rem;
+    line-height: 1.36;
+    text-align: center;
   }
 
-  &__main{
-    padding: 2.4rem 2.4rem 0;
+  &__main{;
     flex: 0 1 auto;
     overflow-y: auto;
   }
 
-  &__heading{
-    margin: 0 0 2.4rem;
-  }
-
-  &__sub-heading{
-    color: $secondaryDarker2;
-    font-size: $fontSize18;
-    @include calcLineHeight($fontSize18);
-    font-weight: 400;
-    margin: 0 0 1.6rem;
-  }
-
   &__body{
-    margin: 0 0 2.4rem;
+    margin: 0 0 4rem;
   }
 
   &__controls{
     padding-bottom: 2.4rem;
   }
 
-  &__form{
-    margin: 0 0 3.2rem;
+  &__tab{
+    display: flex;
+    align-items: center;
+  }
+
+  &__tab-btn{
+    @extend %buttonreset;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 1rem 2.5rem;
+    position: relative;
+
+    &--active::after{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: $primary;
+    }
+  }
+
+  &__tab-btn-text{
+    font-size: 2.2rem;
+    line-height: 1.36;
+    margin: 0 .8rem 0 0;
+  }
+
+  &__tab-btn-icon{
+    font-size: 2.4rem;
+  }
+
+  &__footer{
+    margin: 0 0 3rem;
 
     &:last-child{
       margin: 0;
     }
   }
+
+  &__menu-controls{
+    justify-content: space-between;
+    margin: 0 0 7rem;
+
+    .menu-controls__btn{
+      margin: 0;
+    }
+  }
+
 }

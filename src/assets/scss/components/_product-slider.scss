@@ -48,7 +48,7 @@
     @include media(">=xl"){
       font-size: 8rem;
       min-height: 16rem;
-      width: calc(50% - 26.5rem);
+      width: calc(50% - 27rem);
     }
   }
 
@@ -70,29 +70,33 @@
   }
 
   &__batteries{
-    background: url("../img/products/shape.svg") no-repeat center bottom/ 20.5rem auto;
+    background: url("../img/products/shape.svg") no-repeat center bottom/ 100% auto;
     padding: 0 0 7rem;
-    margin: 0 0 -11.5rem;
+    margin: 0 auto -11.5rem;
     position: relative;
     z-index: 115;
     animation: slideIn ease-in-out 1s;
+    width: 20.5rem;
 
     @include media(">=md"){
-      background: url("../img/products/shape.svg") no-repeat center bottom/ 26.3rem auto;
+      background: url("../img/products/shape.svg") no-repeat center bottom/ 100% auto;
       padding: 0 0 9.2rem;
-      margin: -16.5rem 0 -15rem;
+      margin: -16.5rem auto -15rem;
+      width: 26.3rem;
     }
 
     @include media(">=lg"){
-      background: url("../img/products/shape.svg") no-repeat center bottom/ 34.6rem auto;
+      background: url("../img/products/shape.svg") no-repeat center bottom/ 100% auto;
       padding: 0 0 12.1rem;
-      margin: -21rem 0 -20.3rem;
+      margin: -21rem auto -20.3rem;
+      width: 34.6rem;
     }
 
     @include media(">=xl"){
-      background: url("../img/products/shape.svg") no-repeat center bottom/ 61.9rem auto;
+      background: url("../img/products/shape.svg") no-repeat center bottom/ 100% auto;
       padding: 0 0 20.5rem;
-      margin: -35rem 0 -38.4rem;
+      width: 61.9rem;
+      margin: -35rem auto -38.4rem;
     }
   }
 

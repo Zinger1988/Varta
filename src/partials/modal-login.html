@@ -1,18 +1,42 @@
-<div class="modal" id="login">
+<div class="modal modal--sm" id="login">
 
-    <div class="modal__title-controls">
-        <button class="btn btn--size--regular btn--style--secondary modal-close">
-            <i class="icon icon--size--sm icon--close-16 btn__icon"></i>
-        </button>
+    <i class="icon icon--cancel modal__btn-close modal-close"></i>
+
+    <div class="modal__title">
+
+        <div class="modal__tab">
+            <button class="modal__tab-btn modal__tab-btn--active">
+                <span class="modal__tab-btn-text">Вхiд</span>
+                <i class="modal__tab-btn-icon icon icon--user"></i>
+            </button>
+            <button class="modal__tab-btn">
+                <span class="modal__tab-btn-text">Реєстрація</span>
+                <i class="modal__tab-btn-icon icon icon--pencil"></i>
+            </button>
+        </div><!-- tab -->
+
     </div><!-- title -->
 
     <div class="modal__main">
-
-        <div class="modal__heading h2">Вход на freevac</div>
-
         <div class="modal__body">
-
+            <div class="input-row">
+                <div class="input-row__title">Телефон</div>
+                <input class="input-text input-row__input-text" type="text" placeholder="+38 (XXX) XXX XX XX">
+            </div>
+            <div class="input-row">
+                <div class="input-row__title">Пароль</div>
+                <input class="input-text input-row__input-text" type="password" placeholder="">
+            </div>
         </div><!-- body -->
+
+        <div class="modal__footer text--center">
+            <button class="btn btn--size--regular btn--widened btn--style--primary">Увійти</button>
+        </div><!-- footer -->
+
+        <div class="text text--center">
+            <a href="#">Забули пароль?</a>
+        </div>
+
     </div><!-- main -->
 
-</div><!-- user-name modal -->
+</div><!-- login modal -->

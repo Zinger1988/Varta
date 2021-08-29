@@ -28,51 +28,12 @@
     }
   }
 
-  &__controls{
-    display: flex;
-    align-items: center;
-  }
+  .menu-controls__btn--login{
+    display: none;
 
-  &__btn{
-    @extend %buttonreset;
-    display: inline-flex;
-    align-items: center;
-    margin: 0 0 0 2.4rem;
-    @include animate(color);
-
-    &:hover{
-      color: $primary;
-
-      #{$this}__btn-burger{
-
-        .burger__item{
-          background-color: $primary;
-        }
-
-        &::before,
-        &::after{
-          background-color: $primary;
-        }
-      }
+    @include media(">=md"){
+      display: inline-flex;
     }
-
-    &--login{
-      display: none;
-
-      @include media(">=md"){
-        display: inline-flex;
-      }
-    }
-  }
-
-  &__btn-text{
-    font-size: 2.2rem;
-    line-height: 1.227;
-    margin-right: 1.2rem;
-  }
-
-  &__btn-icon{
-    font-size: 2.4rem;
   }
 
   &--fixed{
