@@ -1,0 +1,131 @@
+.modal-winners{
+  max-width: 45rem;
+
+  $this: &;
+
+  @include media(">=lg"){
+    max-width: 60.3rem;
+  }
+
+  &__title{
+    @include animate(padding);
+    position: relative;
+
+    &::before{
+      content: "\e80a";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'fontello';
+      font-size: 1.8rem;
+      line-height: 1;
+      opacity: 0;
+      color: $primary;
+
+      @include animate(opacity);
+    }
+
+    &--active{
+      padding-right: 3.5rem;
+      padding-left: 3.5rem;
+      cursor: pointer;
+      @include animate(color);
+
+      &:hover{
+        color: $primary;
+      }
+
+      &::before{
+        opacity: 1;
+      }
+    }
+  }
+
+  &__body{
+    overflow: hidden;
+
+    &--active{
+      #{$this}__inner{
+        transform: translateX(-100%);
+
+        @include media(">=lg"){
+          transform: translate(0);
+        }
+      }
+    }
+  }
+
+  &__inner{
+    @include animate(transform height);
+  }
+
+  &__item{
+    margin: 0 0 1.5rem;
+
+    @include media(">=lg"){
+      width: 50%;
+    }
+
+    &:last-child{
+      margin: 0;
+    }
+
+    &--active{
+      #{$this}__list{
+        display: block;
+      }
+
+      #{$this}__subtitle{
+        color: $primary;
+        position: relative;
+        padding-right: 5.2rem;
+
+        &::after{
+          content: "\e802";
+          font-family: 'fontello';
+          position: absolute;
+          right: 3.2rem;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 1rem;
+          line-height: 1;
+        }
+      }
+    }
+  }
+
+  &__subtitle{
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.071;
+    font-weight: bold;
+    cursor: pointer;
+    @include animate(color);
+
+    &:hover{
+      color: $primary;
+    }
+  }
+
+  &__list{
+    @extend %listreset;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 100%;
+    display: none;
+
+    @include media(">=lg"){
+      left: 50%;
+      width: 50%;
+    }
+  }
+
+  &__list-item{
+    font-size: 1.4rem;
+    line-height: 1.285;
+    font-family: $font-condensed;
+    margin: 0 0 .7rem;
+  }
+}

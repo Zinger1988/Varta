@@ -1,11 +1,27 @@
 .updates{
-  padding: 3.6rem 0 0;
+  padding: 3.6rem 0;
+
+  @include media(">=md"){
+    padding: 4.8rem 0;
+  }
+
+  @include media(">=lg"){
+    padding: 5.5rem 0;
+  }
+
+  @include media(">=xl"){
+    padding: 6.6rem 0;
+  }
 
   &__list{
     @include media(">=lg"){
       display: grid;
       grid-gap: 4.5rem;
       grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include media(">=xl"){
+      grid-gap: 11.5rem;
     }
   }
 
@@ -21,6 +37,7 @@
 
     @include media(">=lg"){
       display: block;
+      margin: 0;
     }
 
     &:last-child{
@@ -36,6 +53,10 @@
     @include media(">=lg"){
       align-items: flex-start;
     }
+
+    @include media(">=xl"){
+      margin: 0 0 5rem;
+    }
   }
 
   &__list-num-item{
@@ -47,6 +68,10 @@
 
     @include media(">=lg"){
       font-size: 8rem;
+    }
+
+    @include media(">=xl"){
+      font-size: 14.8rem;
     }
   }
 
@@ -62,9 +87,13 @@
       font-size: 1.9rem;
       margin-top: .7rem;
     }
+
+    @include media(">=xl"){
+      font-size: 3.2rem;
+      margin-top: 1.5rem;
+    }
   }
 
-  .updates__list-desc-pre,
   .updates__list-desc-post{
     font-size: 1.9rem;
     line-height: 1.315;
@@ -73,10 +102,15 @@
 
     @include media(">=sm"){
       font-size: 1.6rem;
+      text-align: center;
     }
 
     @include media(">=md"){
       font-size: 1.9rem;
+    }
+
+    @include media(">=xl"){
+      font-size: 2.8rem;
     }
 
     &:last-child{
@@ -87,53 +121,24 @@
   &__list-desc-img{
     display: block;
     margin: 0 auto 2rem;
+    max-width: 28.8rem;
+
+    &:last-child{
+      margin: 0 auto;
+    }
 
     @include media(">=sm"){
-      margin: 0 0 2rem;
+      margin: 0 auto 2rem;
+      width: 70%;
+      max-width: 25rem;
     }
 
     @include media(">=lg"){
       margin: 0 auto 2rem;
     }
 
-    &--chart{
-      max-width: 32rem;
-      width: 100%;
-
-      @include media(">=lg"){
-        max-width: none;
-      }
-    }
-
-    &--infographic{
-      max-width: 26rem;
-      width: 100%;
-
-      @include media(">=sm"){
-        max-width: 25rem;
-        width: 82.58%;
-      }
-
-      @include media(">=lg"){
-        max-width: none;
-        width: 60.728%;
-      }
-    }
-
-    &--batteries{
-      max-width: 20.4rem;
-      width: 100%;
-      margin: 0 auto;
-
-      @include media(">=sm"){
-        max-width: 14rem;
-        width: 49.1%;
-      }
-
-      @include media(">=lg"){
-        max-width: none;
-        width: 40.485%;
-      }
+    @include media(">=xl"){
+      max-width: 27rem;
     }
   }
 }
