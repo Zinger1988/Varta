@@ -23,7 +23,7 @@
   &__logo{
     width: 16rem;
 
-    @include media(">=xl"){
+    @include media(">=md"){
       width: 22.8rem;
     }
   }

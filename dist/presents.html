@@ -408,7 +408,7 @@
                 <span class="modal__tab-btn-text">Вхiд</span>
                 <i class="modal__tab-btn-icon icon icon--user"></i>
             </button>
-            <button class="modal__tab-btn">
+            <button class="modal__tab-btn" data-modal-id="registration">
                 <span class="modal__tab-btn-text">Реєстрація</span>
                 <i class="modal__tab-btn-icon icon icon--pencil"></i>
             </button>
@@ -1317,6 +1317,69 @@
                 </div>
             </div><!-- winners -->
         </div><!-- body -->
+
+    </div><!-- main -->
+
+</div><!-- registration modal --><div class="modal modal--sm" id="registration">
+
+    <i class="icon icon--cancel modal__btn-close modal-close"></i>
+
+    <div class="modal__title">
+
+        <div class="modal__tab">
+            <button class="modal__tab-btn" data-modal-id="login">
+                <span class="modal__tab-btn-text">Вхiд</span>
+                <i class="modal__tab-btn-icon icon icon--user"></i>
+            </button>
+            <button class="modal__tab-btn modal__tab-btn--active">
+                <span class="modal__tab-btn-text">Реєстрація</span>
+                <i class="modal__tab-btn-icon icon icon--pencil"></i>
+            </button>
+        </div><!-- tab -->
+
+    </div><!-- title -->
+
+    <div class="modal__main">
+        <div class="modal__body">
+            <div class="input-row">
+                <div class="input-row__title">Ім'я</div>
+                <input class="input-text input-row__input-text" type="text" placeholder="Введіть ваше ім’я">
+            </div>
+            <div class="input-row">
+                <div class="input-row__title">Телефон</div>
+                <input class="input-text input-row__input-text" type="text" placeholder="+38 (XXX) XXX XX XX">
+            </div>
+            <div class="input-row">
+                <div class="input-row__title">E-mail</div>
+                <input class="input-text input-row__input-text" type="text" placeholder="mail@domain.com">
+            </div>
+            <div class="input-row">
+                <div class="input-row__title">Пароль</div>
+                <input class="input-text input-row__input-text" type="password" placeholder="">
+            </div>
+            <div class="input-row">
+                <label class="checkbox-radio">
+                    <input class="checkbox-radio__input" type="checkbox" name="">
+                    <span class="checkbox-radio__toggler"></span>
+                    <span class="checkbox-radio__label">
+                        Я погоджуюся з Офіційними правилами та даю згоду на обробку моїх персональних даних.
+                    </span>
+                </label>
+            </div>
+            <div class="input-row">
+                <label class="checkbox-radio">
+                    <input class="checkbox-radio__input" type="checkbox" name="">
+                    <span class="checkbox-radio__toggler"></span>
+                    <span class="checkbox-radio__label">
+                        Я погоджуюся з Умовами використання
+                    </span>
+                </label>
+            </div>
+        </div><!-- body -->
+
+        <div class="modal__footer text--center">
+            <button class="btn btn--size--regular btn--widened btn--style--primary">Зареєструватися</button>
+        </div><!-- footer -->
 
     </div><!-- main -->
 

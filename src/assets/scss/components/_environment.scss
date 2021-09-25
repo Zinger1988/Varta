@@ -103,6 +103,7 @@
         @include media(">=md"){
           display: flex;
           align-items: flex-start;
+          flex-wrap: wrap;
         }
       }
 
@@ -194,9 +195,33 @@
   &__advantages-desc{
     font-size: 2rem;
     line-height: 1.15;
+    margin-bottom: 3rem;
+
+    @include media(">=md"){
+      flex: 1 0;
+    }
 
     *:last-child{
       margin: 0;
+    }
+  }
+
+  &__advantages-img{
+    @include media(">=md"){
+      flex: 1 0 100%;
+      padding-left: 17rem;
+    }
+  }
+
+  &__advantages-img-item{
+    display: block;
+    width: 100%;
+    max-width: 22.6rem;
+    margin: 0 auto;
+
+    @include media(">=md"){
+      margin: 0;
+      max-width: 17.8rem;
     }
   }
 
@@ -206,7 +231,7 @@
     @include media(">=md"){
       flex-shrink: 0;
       width: 100%;
-      margin: 0 0 1.2rem;
+      margin: 0 0 6rem;
     }
 
     @include media(">=xl"){

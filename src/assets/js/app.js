@@ -96,7 +96,7 @@ const SiteJS = {
         if(document.querySelectorAll('.swiper').length){
             const swiper = new Swiper('.swiper', {
                 loop: false,
-                slidesPerView: "auto",
+                slidesPerView: 3,
                 slidesPerGroup: 1,
                 allowTouchMove: false,
                 breakpoints: {

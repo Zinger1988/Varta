@@ -1,6 +1,14 @@
 .product-slider{
   background: #DCE0E3;
 
+  .swiper-slide{
+    @include animate(opacity);
+  }
+
+  .swiper-slide-prev{
+    opacity: 0;
+  }
+
   &__container{
     position: relative;
     background: rgb(220,224,227);
@@ -224,11 +232,12 @@
       bottom: 0;
       width: 100%;
       height: 50%;
-      background: linear-gradient(180deg, rgba(230,234,237,0) 0%, rgba(225,227,230,0.2) 25%, rgba(220,224,227,1) 100%);
+      background: linear-gradient(180deg, rgba(230,234,237,0) 0%, rgba(220,224,227,1) 50%, rgba(220,224,227,1) 100%);
       z-index: 5;
 
       @include media(">=md"){
         height: 33.333%;
+        background: linear-gradient(180deg, rgba(230,234,237,0) 0%, rgba(225,227,230,0.2) 25%, rgba(220,224,227,1) 100%);
       }
 
       @include media(">=lg"){
@@ -242,17 +251,21 @@
     width: 100%;
 
     @include media(">=md"){
-      height: 19.4rem;
       object-fit: cover;
       object-position: center top;
+      height: 25.39vw;
+      width: 80%;
+      margin: 0 auto;
     }
 
     @include media(">=lg"){
-      height: 25.9rem;
+      height: 26.1vw;
+      width: 88.148%;
     }
 
     @include media(">=xl"){
       height: 48.6rem;
+      width: 82.287%;
     }
   }
 

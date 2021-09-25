@@ -7,7 +7,7 @@
   &__content{
     padding-top: 8.2rem;
 
-    @include media(">=xl"){
+    @include media(">=md"){
       padding-top: 9.6rem;
     }
   }
