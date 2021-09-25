@@ -95,20 +95,23 @@ const SiteJS = {
 
         if(document.querySelectorAll('.swiper').length){
             const swiper = new Swiper('.swiper', {
-                loop: false,
+                loop: true,
                 slidesPerView: 3,
                 slidesPerGroup: 1,
                 allowTouchMove: false,
                 breakpoints: {
                     320: {
+                        slidesPerView: 2,
                         slidesOffsetBefore: 34,
                         slidesOffsetAfter: 34,
                     },
                     768: {
-                        slidesOffsetBefore: 44,
-                        slidesOffsetAfter: 44,
+                        slidesPerView: 2,
+                        slidesOffsetBefore: 54,
+                        slidesOffsetAfter: 54,
                     },
                     992: {
+                        slidesPerView: 3,
                         slidesOffsetBefore: 60,
                         slidesOffsetAfter: 60,
                     },
@@ -133,7 +136,6 @@ const SiteJS = {
         new Modal('.modal');
         this.expandTextarea('.input-text--textarea');
         this.typeDisplay();
-        this.fixedHeader();
         this.modalWinners();
     },
     typeDisplay() {
@@ -168,23 +170,6 @@ const SiteJS = {
                     cb();
                     throttle = false;
                 }, 500)
-            }
-        })
-    },
-    fixedHeader() {
-        const header = document.querySelector('.page-header');
-
-        window.addEventListener('scroll', (e)=> {
-            if (document.documentElement.scrollTop > 300) {
-                header.classList.add('page-header--fixed');
-            } else {
-                header.classList.remove('page-header--fixed');
-            }
-        })
-
-        window.addEventListener('DOMContentLoaded', () => {
-            if (document.documentElement.scrollTop > 300) {
-                header.classList.add('page-header--fixed');
             }
         })
     },

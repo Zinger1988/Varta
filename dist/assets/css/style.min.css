@@ -1681,11 +1681,11 @@ body {
   padding: 2.4rem 0;
   background-color: #ffffff;
   box-shadow: 0 1px 0 0 #1a428a;
-  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 100;
+  position: fixed;
+  z-index: 120;
 }
 
 .page-header__container {
@@ -1700,11 +1700,6 @@ body {
 
 .page-header .menu-controls__btn--login {
   display: none;
-}
-
-.page-header--fixed {
-  position: fixed;
-  z-index: 120;
 }
 
 #modal-overlay {
@@ -2608,8 +2603,32 @@ body {
   background: #DCE0E3;
 }
 
+.product-slider .swiper-slide-active {
+  transform: scale(1);
+}
+
+.product-slider .swiper-slide-next {
+  transform: scale(0.92);
+}
+
+.product-slider .swiper-slide-next ~ .swiper-slide {
+  transform: scale(0.84);
+}
+
 .product-slider .swiper-slide {
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  position: relative;
+}
+
+.product-slider .swiper-slide::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(230, 234, 237, 0) 0%, #dce0e3 50%, #dce0e3 100%);
+  z-index: 25;
 }
 
 .product-slider .swiper-slide-prev {
@@ -2623,7 +2642,7 @@ body {
 }
 
 .product-slider__title {
-  font-size: 3.6rem;
+  font-size: calc(3.6rem + (48 - 36)*((100vw - 360px)/(768 - 360)));
   line-height: 1;
   font-family: "din-wd", "Helvetica Neue", "Helvetica", sans-serif;
   text-align: center;
@@ -2652,12 +2671,13 @@ body {
 
 .product-slider__batteries {
   background: url("../img/products/shape.svg") no-repeat center bottom/100% auto;
-  padding: 0 0 7rem;
+  padding: 0 0 5rem;
   margin: 0 auto -11.5rem;
   position: relative;
-  z-index: 115;
+  z-index: 10;
   animation: slideIn ease-in-out 1s;
-  width: 20.5rem;
+  width: 44vw;
+  max-width: 26rem;
 }
 
 @keyframes slideIn {
@@ -2677,7 +2697,7 @@ body {
 .product-slider__batteries-img {
   display: block;
   margin: 0 auto;
-  width: 10.8rem;
+  width: 60%;
   animation: slideInAlt ease-in-out 2s;
 }
 
@@ -2702,7 +2722,6 @@ body {
 .product-slider__inner {
   display: flex;
   position: relative;
-  background: linear-gradient(0deg, rgba(230, 234, 237, 0) 0%, rgba(225, 227, 230, 0.2) 25%, #dce0e3 100%), #ffffff;
   animation: opacity ease-in-out 3s;
   transition: opacity 0.2s ease-in-out;
 }
@@ -2746,20 +2765,11 @@ body {
   position: relative;
 }
 
-.product-slider__item::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 50%;
-  background: linear-gradient(180deg, rgba(230, 234, 237, 0) 0%, #dce0e3 50%, #dce0e3 100%);
-  z-index: 5;
-}
-
 .product-slider .product-slide {
-  display: block;
+  display: flex;
   width: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .product-slider__nav-btn {
@@ -3208,6 +3218,10 @@ body {
   .product-slider__inner::after {
     width: 13.4rem;
   }
+
+  .product-slider .product-slide {
+    height: 53vw;
+  }
 }
 
 @media (min-width: 768px) {
@@ -3629,49 +3643,41 @@ body {
     align-items: center;
   }
 
+  .product-slider .swiper-slide::after {
+    height: 33.333%;
+    background: linear-gradient(180deg, rgba(230, 234, 237, 0) 0%, rgba(225, 227, 230, 0.2) 25%, #dce0e3 100%);
+  }
+
   .product-slider__container {
     padding-top: 3.2rem;
     padding-bottom: 3rem;
   }
 
   .product-slider__title {
-    width: calc(50% - 12rem);
+    width: calc(50% - 7rem);
     text-align: left;
-    font-size: 3.3rem;
-    min-height: 6.8rem;
+    min-height: 2em;
+    font-size: calc(3.3rem + (48 - 33)*((100vw - 768px)/(999 - 768)));
   }
 
   .product-slider__batteries {
-    background: url("../img/products/shape.svg") no-repeat center bottom/100% auto;
-    padding: 0 0 9.2rem;
-    margin: -16.5rem auto -15rem;
-    width: 26.3rem;
-  }
-
-  .product-slider__batteries-img {
-    width: 11.3rem;
-  }
-
-  .product-slider__item::after {
-    height: 33.333%;
-    background: linear-gradient(180deg, rgba(230, 234, 237, 0) 0%, rgba(225, 227, 230, 0.2) 25%, #dce0e3 100%);
+    padding: 0 0 5.2rem;
+    margin: -11rem auto -16rem;
+    width: 27.036vw;
+    max-width: 23.4rem;
   }
 
   .product-slider .product-slide {
-    object-fit: cover;
-    object-position: center top;
-    height: 25.39vw;
-    width: 80%;
-    margin: 0 auto;
+    height: 36.73vw;
+    max-height: 31.8rem;
   }
 
   .product-slider__nav-btn {
-    bottom: 13.2rem;
+    bottom: 19.2rem;
   }
 
   .product-slider__scroll-down {
-    left: calc(50% + 18.5rem);
-    bottom: 1.4rem;
+    bottom: 3.4rem;
   }
 
   .swiper .swiper-slide {
@@ -3892,6 +3898,10 @@ body {
     height: 34vw;
   }
 
+  .product-slider .swiper-slide::after {
+    height: 29%;
+  }
+
   .product-slider__container {
     padding-top: 4.5rem;
     padding-bottom: 5rem;
@@ -3899,19 +3909,6 @@ body {
 
   .product-slider__title {
     font-size: 4.1rem;
-    width: calc(50% - 14.3rem);
-    min-height: 8.2rem;
-  }
-
-  .product-slider__batteries {
-    background: url("../img/products/shape.svg") no-repeat center bottom/100% auto;
-    padding: 0 0 12.1rem;
-    margin: -21rem auto -20.3rem;
-    width: 34.6rem;
-  }
-
-  .product-slider__batteries-img {
-    width: 15rem;
   }
 
   .product-slider__inner::before,
@@ -3922,15 +3919,11 @@ body {
   .product-slider__inner::before,
   .product-slider__inner::after {
     width: 18rem;
-  }
-
-  .product-slider__item::after {
-    height: 29%;
   }
 
   .product-slider .product-slide {
-    height: 26.1vw;
-    width: 88.148%;
+    height: 22vw;
+    max-height: none;
   }
 
   .product-slider__nav-btn {
@@ -3950,8 +3943,7 @@ body {
   }
 
   .product-slider__scroll-down {
-    left: calc(50% + 24rem);
-    bottom: 2.4rem;
+    bottom: 1.4rem;
   }
 
   .product-slider__scroll-down::after {
@@ -4038,6 +4030,19 @@ body {
   .product-slider__inner::before,
   .product-slider__inner::after {
     width: 24rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .product-slider__title {
+    font-size: 5.1rem;
+    width: calc(50% - 8rem);
+  }
+
+  .product-slider__batteries {
+    width: 16vw;
+    max-width: 28rem;
+    margin: -12rem auto -16rem;
   }
 }
 
@@ -4388,24 +4393,18 @@ body {
 
   .product-slider__container {
     padding-top: 8rem;
-    padding-bottom: 0;
+    padding-bottom: 3rem;
   }
 
   .product-slider__title {
     font-size: 8rem;
-    min-height: 16rem;
-    width: calc(50% - 27rem);
+    width: calc(50% - 21rem);
   }
 
   .product-slider__batteries {
-    background: url("../img/products/shape.svg") no-repeat center bottom/100% auto;
-    padding: 0 0 20.5rem;
-    width: 61.9rem;
-    margin: -35rem auto -38.4rem;
-  }
-
-  .product-slider__batteries-img {
-    width: 26.7rem;
+    width: 20vw;
+    max-width: 38rem;
+    margin: -19.5rem auto -35rem;
   }
 
   .product-slider__inner::before,
@@ -4415,7 +4414,6 @@ body {
 
   .product-slider .product-slide {
     height: 48.6rem;
-    width: 82.287%;
   }
 
   .product-slider__nav-btn {
